@@ -39,8 +39,8 @@ std::cout<<"Hello world"<<std::endl;
 * Call by Value: passing arguments to a function **copies** the actual value of an argument into the parameter of the function. Changes made to the parameter inside the function will not change the argument. 
 * Call by Reference: a reference variable is an alias, another name for an already exisiting variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the same variable. Changes made to the parameter inside the function have also change the argument.
 ```cpp
-	int ValidateInputData(const double& S0, const double& U, const double& D, const double& R);
-  // Reference to const
+int ValidateInputData(const double& S0, const double& U, const double& D, const double& R);
+// Reference to const
 ```
 * Reference to const: **Read-only call by reference
 
@@ -114,6 +114,35 @@ if (*ptr1 == *ptr2) {
 * Works like a reference parameter to allow change to argument from within function. 
 * A pointer parameter musst be explicitly dereferenced to access the contents at that address.
 
-### Pointers to Constants and Constant Pointers
+### Pointers to Constants
 * Pointer to a constant: cannot change the value that is pointed at. 
+* Use const keyword for pointers in function headers to protect data from modification from within function.
+```cpp
+#include<iostream>
+using namespace std;
+const int ptr* = &a; // Read from right to the left: pointer to constant.
+```
+
+### Constant Pointers: Read from right to left
 * Constant pointer: address in pointer cannot change once a pointer is initialized.
+* Define in declaration.
+
+```cpp
+#include<iostream>
+using namespace std;
+int * const ptr = &a; // Read from right to the left: constant pointer.
+```
+
+### Stack: Static Allocation
+* Local variables: All load varaibles will be destroyed with program exits. 
+* Declared / defined at compiling time (before running).
+
+### Heap: Dynamic Allocation
+* Can allocate storage for a variable while a program is running
+* Uses **new** operator to allocate memory.
+* Dynamic Allocation: The memory associated with a pointer is allocated at run-time!
+* Heap: outside address space
+
+### Memory Leaks
+* A memory leak occurs if no-longer needed dynamic memory is not freed.
+* A pointer is dangling if it contains the address of the memory that has been freed by a call to **delete**. Solution: set pointers to 0 as soon as memory is freed.

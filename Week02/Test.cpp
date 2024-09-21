@@ -35,6 +35,21 @@ int main() {
   mySwap(&a, &b);
   cout<<"swap: "<<"a = "<<a<<"b = "<<b<<endl;
 
+  // Pointers to Constant
+  const double dTaxRates[] = {0.1, 0.2, 0.4, 0.5}; // dTaxRate is a constant pointer to constant.
+  const int *ptrToConstant = dTaxRates;
+
+  // Dynamic Allocation
+  double *hPtr = NULL;
+  hPtr = new double; // Allocate a double memory space on heap at runtime.
+  *hPtr = 23.45;
+  delete hPtr; // Return the allocated memory to OS. Prevent memory leak.
+  //*hPtr = 64.25; // Undefined behavior.
+  hPtr = NULL; // Prevent pointer dangling.
+
+  double *arrayPtr = new double[5];
+  delete []arrayPtr;
+
   return 0;
   
 }
