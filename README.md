@@ -50,12 +50,70 @@ N: Expiration
 n: 0 -> N StEP
 i: Index
 
-- Validation condition: S(0) > 0, u > d > 0 
-- Call Payoff: (S(N,i), k)
+* Validation condition: S(0) > 0, u > d > 0 
+* Call Payoff: (S(N,i), k)
 
 # Week 02
 ## C++
+* Pointer
+* Inheritance, especially with polymorphism
+* Templates, especially with STL libraries
+### Unsigned Integer
+* Integer 0 or greater
+```c++
+#include <iostream>
+using namespace std;
+for (unsigned int i = 0; i < 10; i += 1) {
+  cout<<i<<endl;
+}
+```
+### Makefile
+* .o: Objectify
+* C++ source code ->
+* Compile: translate the source code to objectify (binary form) -> 
+* Link: Integrate all objective files and related C++ libraries into one standalone executable file. ->
+* Clean: Remove all objective files and executable files.
 
+### Address Operator
+* Each variable in a program is stored at a unique address in memoery.
+* &: Reference operator
+```c++
+#include <iostream>
+using namespace std;
+double dPrice = 21.68;
+count <<&dPrice<<endl; // address in hexadecimal
+```
 
+### Memory
+* Operating System
+* Heap
+* Stack: for storing variables created by user program.
+* Address Space
+* Executable
 
+### Pointer
+* Dynamic allocation
+* *Operator: indirect operator. Get the value of the address pointed by the pointer 
 
+### Array & Pointer
+* Array name is associated with starting address of the array. Array name is a pointer with restriction.
+* Array name can be used as a pointer constant.
+* Pointer can be used as an array name.
+
+### Comparing pointers
+```cpp
+#include<iostream>
+using namespace std;
+
+if (*ptr1 == *ptr2) {
+  //....
+}
+```
+
+### Call by Pointer
+* Works like a reference parameter to allow change to argument from within function. 
+* A pointer parameter musst be explicitly dereferenced to access the contents at that address.
+
+### Pointers to Constants and Constant Pointers
+* Pointer to a constant: cannot change the value that is pointed at. 
+* Constant pointer: address in pointer cannot change once a pointer is initialized.
