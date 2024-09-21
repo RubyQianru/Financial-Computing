@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cmath>
+#include<iomanip> 
 using namespace std;
 
   // S(n, i) = S(0) * (u)^i * (d)^(n-i)
@@ -14,13 +15,14 @@ int main() {
   double d = 0.86;
   int N = 8;
   int index = 0;
+  double prices[100]; 
 
   for (int n = 0; n <= N; n += 1) {
     for (int i = 0; i <= n; i += 1) {
       double price =  S0*pow(u,i)*pow(d,n-i);
       cout << "Asset Price at binomial Tree model" << n ;
-      cont << fixed << setprecision(2) << "S(n,i)" << price << endl;
-      prices[index++] = price
+      cout << fixed << setprecision(2) << "S(n,i)" << price << endl;
+      prices[index++] = price;
     }
   }
 

@@ -42,7 +42,7 @@ std::cout<<"Hello world"<<std::endl;
 	int ValidateInputData(const double& S0, const double& U, const double& D, const double& R);
   // Reference to const
 ```
-* Reference to const: for validation,
+* Reference to const: **Read-only call by reference
 
 ## Binomial Tree Model
 S(n, i) = S(0) * (u)^i * (d)^(n-i)
@@ -52,6 +52,10 @@ i: Index
 
 - Validation condition: S(0) > 0, u > d > 0 
 - Call Payoff: (S(N,i), k)
+
+# Week 02
+## C++
+
 
 
 
