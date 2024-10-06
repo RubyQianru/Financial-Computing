@@ -37,7 +37,7 @@ int main() {
 
   // Pointers to Constant
   const double dTaxRates[] = {0.1, 0.2, 0.4, 0.5}; // dTaxRate is a constant pointer to constant.
-  const int *ptrToConstant = dTaxRates;
+  const int *ptrToConstant = &dTaxRates[0];
 
   // Dynamic Allocation
   double *hPtr = NULL;
