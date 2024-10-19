@@ -211,3 +211,11 @@ int a = 10; // Initialization
 ### Deconstructor
 
 Automatically executed when the object goes out of scope.
+
+# Week 05
+
+## C++
+
+### Stack
+
+Last in, first out.
